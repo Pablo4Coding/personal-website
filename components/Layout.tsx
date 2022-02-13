@@ -1,3 +1,4 @@
+import { Header } from '@components';
 import styled from 'styled-components';
 
 interface LayoutProps {
@@ -12,6 +13,8 @@ const StyledContent = styled.div`
 const Layout = ({ children }: LayoutProps) => {
   return (
     <>
+      <Header />
+
       <StyledContent>{children}</StyledContent>
     </>
   );
