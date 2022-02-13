@@ -1,3 +1,4 @@
+import { Menu } from '@components';
 import { navLinks } from '@config';
 import { usePrefersReducedMotion, useScrollDirection } from '@hooks';
 import Image from 'next/image';
@@ -96,7 +97,7 @@ const StyledLinks = styled.div`
     li {
       margin: 0 5px;
       position: relative;
-      font-size: var(--fz-xs);
+      font-size: var(--fz-lg);
 
       a {
         padding: 10px;
@@ -154,6 +155,8 @@ const Navbar = () => {
             </ol>
             <div>{ResumeLink}</div>
           </StyledLinks>
+
+          <Menu />
         </StyledNav>
       </StyledHeader>
     </>

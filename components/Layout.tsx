@@ -1,4 +1,4 @@
-import { HeadWrapper, Navbar } from '@components';
+import { Footer, HeadWrapper, Navbar } from '@components';
 import styled from 'styled-components';
 
 interface LayoutProps {
@@ -19,6 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
       <StyledContent>
         <Navbar />
         {children}
+        <Footer />
       </StyledContent>
     </div>
   );
