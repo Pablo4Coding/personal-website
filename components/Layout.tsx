@@ -10,16 +10,17 @@ const StyledContent = styled.div`
   flex-direction: column;
   min-height: 100vh;
 `;
+
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <>
+    <div id="root">
       <HeadWrapper />
 
       <StyledContent>
         <Navbar />
         {children}
       </StyledContent>
-    </>
+    </div>
   );
 };
 
