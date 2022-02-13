@@ -1,5 +1,6 @@
 import { navLinks } from '@config';
 import { usePrefersReducedMotion, useScrollDirection } from '@hooks';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
@@ -59,6 +60,24 @@ const StyledNav = styled.nav`
   color: var(--deep-sky-blue);
 `;
 
+const StyledLogo = styled.div`
+  ${({ theme }) => theme.mixins.flexCenter};
+  width: 42px;
+  height: 42px;
+
+  &:hover,
+  &:focus {
+    /* fill: var(--green-tint); */
+    transform: translateY(-10px);
+  }
+
+  svg {
+    fill: none;
+    transition: var(--transition);
+    user-select: none;
+  }
+`;
+
 const StyledLinks = styled.div`
   display: flex;
   align-items: center;
@@ -116,7 +135,12 @@ const Navbar = () => {
     <>
       <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
         <StyledNav>
-          <div>The Logo</div>
+          {/* <StyledLogo>
+            <IconLogo />
+          </StyledLogo> */}
+          <StyledLogo>
+            <Image src="/orange-svg.svg" height={30} width={30} alt="orange" />
+          </StyledLogo>
 
           <StyledLinks>
             <ol>

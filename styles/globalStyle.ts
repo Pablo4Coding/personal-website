@@ -48,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
 
     &:hover,
     &:focus {
-      color: var(--aqua);
+      color: var(--light-sky-blue);
     }
   }
 
