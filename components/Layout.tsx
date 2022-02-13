@@ -1,4 +1,4 @@
-import { Header } from '@components';
+import { HeadWrapper, Navbar } from '@components';
 import styled from 'styled-components';
 
 interface LayoutProps {
@@ -13,9 +13,12 @@ const StyledContent = styled.div`
 const Layout = ({ children }: LayoutProps) => {
   return (
     <>
-      <Header />
+      <HeadWrapper />
 
-      <StyledContent>{children}</StyledContent>
+      <StyledContent>
+        <Navbar />
+        {children}
+      </StyledContent>
     </>
   );
 };

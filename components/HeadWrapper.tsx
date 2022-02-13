@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const Header = () => {
+const HeadWrapper = () => {
   return (
     <Head>
       <title>Pablo Andres Portfolio</title>
@@ -8,4 +8,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeadWrapper;
