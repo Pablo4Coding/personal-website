@@ -13,8 +13,9 @@ const variables = css`
     --cobalt: #015c9c;
     --deep-sky-blue: #00b2ee;
     --light-sky-blue: #7edfff;
+    --grey: #e6f1ff;
     --aqua: #00ffff;
-    --naranja: #ff8c00;
+    --orange: #ff8c00;
     --pink: #f57dff;
 
     --fz-xxs: 1.2rem;

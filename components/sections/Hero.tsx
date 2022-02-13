@@ -8,10 +8,18 @@ const StyledHeroSection = styled.section`
   padding: 0;
 `;
 
+const StyledGradientText = styled.div`
+  font-size: 10rem;
+  font-weight: 900;
+  text-transform: capitalize;
+  ${({ theme }) => theme.mixins.gradientText};
+`;
+
 const Hero = () => {
   return (
     <StyledHeroSection>
       <div>Hero section</div>
+      <StyledGradientText>Software Engineer</StyledGradientText>
     </StyledHeroSection>
   );
 };
