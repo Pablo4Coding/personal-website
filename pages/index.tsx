@@ -1,4 +1,4 @@
-import { About, Hero, Layout } from '@components';
+import { About, Contact, Experience, Hero, Layout, Projects } from '@components';
 import type { NextPage } from 'next';
 import styled from 'styled-components';
 
@@ -14,6 +14,9 @@ const Home: NextPage = () => {
       <StyledMainContainer className="fillHeight">
         <Hero />
         <About />
+        <Experience />
+        <Projects />
+        <Contact />
       </StyledMainContainer>
     </Layout>
   );

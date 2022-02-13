@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif;
     font-size: 62.5%; /* 62.5% of 16px = 10px */
+    background-color: var(--black-pearl)
   }
 
   * {
@@ -34,8 +35,25 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: #021321;
+    /* background: #021321; */
     /* background-color: #021321; */
+    background: url('./bg.jpg');
+    background-size: cover;
+    /* background-repeat: repeat-y; */
+    background-position: center;
+    /* background-attachment: fixed; */
+    
+    backdrop-filter: brightness(80%);
+    transition: backdrop-filter 0.2s;
+
+    /* animation: blur 2s ease infinite;
+
+    @keyframes blur {
+      0%, 100%  { backdrop-filter: blur(0px); }
+      50% { backdrop-filter: blur(10px); }
+    } */
+
+    
     /* background: url('./fondo9.jpg') no-repeat center center fixed; 
     backdrop-filter: blur(4px);
     backdrop-filter: brightness(60%);

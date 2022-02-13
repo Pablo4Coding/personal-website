@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledAboutSection = styled.section`
+const StyledExperienceSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   align-items: flex-start;
@@ -13,12 +13,12 @@ const StyledTitle = styled.div`
   ${({ theme }) => theme.mixins.gradientText};
 `;
 
-const About = () => {
+const Experience = () => {
   return (
-    <StyledAboutSection id="about">
-      <StyledTitle>About Section</StyledTitle>
-    </StyledAboutSection>
+    <StyledExperienceSection id="experience">
+      <StyledTitle>Experience Section</StyledTitle>
+    </StyledExperienceSection>
   );
 };
 
-export default About;
+export default Experience;

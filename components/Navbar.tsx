@@ -17,12 +17,13 @@ const StyledHeader = styled.header<NavbarProps>`
   padding: 0 50px;
   width: 100%;
   height: var(--navbar-height);
-  background-color: var(--black-pearl);
+  /* background-color: var(--black-pearl); */
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
   filter: blur(10px);
   transition: var(--transition);
+  z-index: 2;
 
   @media (max-width: 1080px) {
     padding: 0 40px;
