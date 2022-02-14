@@ -18,11 +18,11 @@ const StyledHeader = styled.header<NavbarProps>`
   padding: 0 50px;
   width: 100%;
   height: var(--navbar-height);
-  /* background-color: var(--black-pearl); */
+  background-color: transparent;
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
-  filter: blur(10px);
+  backdrop-filter: blur(4px);
   transition: var(--transition);
   z-index: 2;
 
