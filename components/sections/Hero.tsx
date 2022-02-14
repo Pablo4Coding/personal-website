@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styled from 'styled-components';
 
 const StyledHeroSection = styled.section`
@@ -7,6 +8,7 @@ const StyledHeroSection = styled.section`
   min-height: 100vh;
   padding: 0;
   color: var(--light-sky-blue);
+  z-index: 2;
 `;
 
 const StyleTitle = styled.div`
@@ -21,20 +23,50 @@ const StyledGradientText = styled.div`
   ${({ theme }) => theme.mixins.gradientText};
 `;
 
+const StyledBackgroundContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  border-bottom: 3px solid white;
+
+  &.image-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+`;
+
 const Hero = () => {
   return (
-    <StyledHeroSection>
-      <div>Hero section</div>
-      <StyledGradientText>Software Engineer</StyledGradientText>
-      <StyleTitle>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quos?</StyleTitle>
-      <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis aliquid minus
-        delectus, repellendus aspernatur dolore consequatur fuga! Ad delectus veniam laborum,
-        perferendis error id eum rem beatae necessitatibus porro temporibus inventore voluptate
-        commodi aperiam quo expedita facilis maxime eveniet consequuntur et sint eius eaque
-        corporis. Accusamus voluptate nihil non ducimus.
-      </div>
-    </StyledHeroSection>
+    <>
+      <StyledHeroSection>
+        <div>Hero section</div>
+        <StyledGradientText>Software Engineer</StyledGradientText>
+        <StyleTitle>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quos?</StyleTitle>
+        <div>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis aliquid minus
+          delectus, repellendus aspernatur dolore consequatur fuga! Ad delectus veniam laborum,
+          perferendis error id eum rem beatae necessitatibus porro temporibus inventore voluptate
+          commodi aperiam quo expedita facilis maxime eveniet consequuntur et sint eius eaque
+          corporis. Accusamus voluptate nihil non ducimus.
+        </div>
+      </StyledHeroSection>
+      <StyledBackgroundContainer>
+        <div className="image-wrapper">
+          <Image
+            src="/images/bg.jpg"
+            alt="background"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            priority
+          />
+        </div>
+      </StyledBackgroundContainer>
+    </>
   );
 };
 
