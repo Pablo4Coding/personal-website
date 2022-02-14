@@ -27,6 +27,7 @@ const variables = css`
     --fz-xxl: 2.2rem;
     --fz-heading: 3.2rem;
 
+    --border-radius: 4px;
     --navbar-height: 100px;
     --navbar-scroll-height: 70px;
 

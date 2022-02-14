@@ -18,8 +18,10 @@ const Layout = ({ children }: LayoutProps) => {
 
       <StyledContent>
         <Navbar />
-        {children}
-        <Footer />
+        <div id="content">
+          {children}
+          <Footer />
+        </div>
       </StyledContent>
     </div>
   );

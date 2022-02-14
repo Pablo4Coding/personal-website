@@ -1,6 +1,7 @@
 import { navLinks } from '@config';
+import { useOnClickOutside } from '@hooks';
 import Link from 'next/link';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
 interface MenuProps {
@@ -47,7 +48,7 @@ const StyledHamburgerButton = styled.button<MenuProps>`
     width: var(--hamburger-width);
     height: 2px;
     border-radius: var(--border-radius);
-    background-color: var(--pink);
+    background-color: var(--grey);
     transition-duration: 0.22s;
     transition-property: transform;
     transition-delay: ${(props) => (props.menuOpen ? `0.12s` : `0s`)};
@@ -65,7 +66,7 @@ const StyledHamburgerButton = styled.button<MenuProps>`
       width: var(--hamburger-width);
       height: 2px;
       border-radius: 4px;
-      background-color: var(--pink);
+      background-color: var(--grey);
       transition-timing-function: ease;
       transition-duration: 0.15s;
       transition-property: transform;
@@ -99,9 +100,9 @@ const StyledSidebar = styled.aside<MenuProps>`
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0;
-    background-color: var(--tangaroa);
-    box-shadow: -10px 0px 30px -15px var(--light-black-pearl);
-    z-index: 9;
+    background-color: var(--black-pearl);
+    box-shadow: -10px 0px 30px -15px var(--black-pearl);
+    z-index: 2;
     transform: translateX(${(props) => (props.menuOpen ? 0 : 100)}vw);
     visibility: ${(props) => (props.menuOpen ? 'visible' : 'hidden')};
     transition: var(--transition);
@@ -125,8 +126,7 @@ const StyledSidebar = styled.aside<MenuProps>`
     li {
       position: relative;
       margin: 0 auto 20px;
-      counter-increment: item 1;
-      font-size: clamp(var(--fz-sm), 4vw, var(--fz-lg));
+      font-size: clamp(var(--fz-md), 4vw, var(--fz-xxl));
 
       @media (max-width: 600px) {
         margin: 0 auto 10px;
@@ -153,6 +153,12 @@ const Menu = () => {
   const buttonRef = useRef(null);
   const navRef = useRef(null);
   const wrapperRef = useRef(null);
+  useOnClickOutside(wrapperRef, () => setMenuOpen(false));
+
+  useEffect(() => {
+    const body = document.body;
+    menuOpen ? body?.classList.add('blur') : body?.classList.remove('blur');
+  }, [menuOpen]);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 

@@ -8,7 +8,7 @@ const StyledHeroSection = styled.section`
   min-height: 100vh;
   padding: 0;
   color: var(--light-sky-blue);
-  z-index: 2;
+  z-index: 1;
 `;
 
 const StyleTitle = styled.div`
