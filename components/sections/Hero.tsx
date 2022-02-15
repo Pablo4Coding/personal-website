@@ -1,3 +1,4 @@
+import { Hexagon } from '@components';
 import Image from 'next/image';
 import styled from 'styled-components';
 
@@ -39,12 +40,21 @@ const StyledBackgroundContainer = styled.div`
   }
 `;
 
+const StyledSocialMediaWrapper = styled.div`
+  ${({ theme }) => theme.mixins.flexCenter};
+`;
+
 const Hero = () => {
   return (
     <>
       <StyledHeroSection>
         <div>Hero section</div>
         <StyledGradientText>Software Engineer</StyledGradientText>
+        <StyledSocialMediaWrapper>
+          <Hexagon name={'Linkedin'} />
+          <Hexagon name={'Github'} />
+        </StyledSocialMediaWrapper>
+
         <StyleTitle>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quos?</StyleTitle>
         <div>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis aliquid minus

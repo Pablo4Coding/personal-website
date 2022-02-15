@@ -38,6 +38,8 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 10px;
   }
 
+
+
   body {
     position: absolute;
     width: 100%;
