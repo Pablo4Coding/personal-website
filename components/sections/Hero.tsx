@@ -44,16 +44,24 @@ const StyledSocialMediaWrapper = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
 `;
 
+const StyledPrimaryButton = styled.button`
+  ${({ theme }) => theme.mixins.primaryButton};
+`;
+
 const Hero = () => {
   return (
     <>
       <StyledHeroSection>
         <div>Hero section</div>
+
         <StyledGradientText>Software Engineer</StyledGradientText>
+
         <StyledSocialMediaWrapper>
           <Hexagon name={'Linkedin'} />
           <Hexagon name={'Github'} />
         </StyledSocialMediaWrapper>
+
+        <StyledPrimaryButton>Download Resume</StyledPrimaryButton>
 
         <StyleTitle>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quos?</StyleTitle>
         <div>

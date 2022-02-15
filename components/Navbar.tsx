@@ -106,12 +106,6 @@ const StyledLinks = styled.div`
   }
 `;
 
-const ResumeLink = (
-  <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-    Resume
-  </a>
-);
-
 const Navbar = () => {
   const prefersReducedMotion = usePrefersReducedMotion();
   const scrollDirection = useScrollDirection({ initialDirection: 'down' });
@@ -153,7 +147,6 @@ const Navbar = () => {
                   </li>
                 ))}
             </ol>
-            <div>{ResumeLink}</div>
           </StyledLinks>
 
           <Menu />

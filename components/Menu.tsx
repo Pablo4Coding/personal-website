@@ -1,8 +1,8 @@
-import { navLinks } from '@config';
-import { useOnClickOutside } from '@hooks';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
+import { navLinks } from '../config';
+import { useOnClickOutside } from '../hooks';
 
 interface MenuProps {
   menuOpen: boolean;
@@ -140,12 +140,12 @@ const StyledSidebar = styled.aside<MenuProps>`
     }
   }
 
-  /* .resume-link {
-    ${({ theme }) => theme.mixins.bigButton};
+  .resume-link {
+    ${({ theme }) => theme.mixins.primaryButton};
     padding: 18px 50px;
     margin: 10% auto 0;
     width: max-content;
-  } */
+  }
 `;
 
 const Menu = () => {
@@ -190,7 +190,7 @@ const Menu = () => {
             )}
 
             <a href="/resume.pdf" className="resume-link">
-              Resume
+              Download Resume
             </a>
           </nav>
         </StyledSidebar>

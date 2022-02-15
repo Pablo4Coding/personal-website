@@ -44,6 +44,32 @@ const mixins = {
       }
     }
   `,
+
+  primaryButton: css`
+    font-size: var(--fz-md);
+    font-weight: 600;
+    color: var(--grey);
+    cursor: pointer;
+    padding: 1.75rem 1.85rem;
+    line-height: 1;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: var(--transition);
+
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+
+    &:hover {
+      background-position: 100% 0;
+      transition: var(--transition);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  `,
 };
 
 export default mixins;
