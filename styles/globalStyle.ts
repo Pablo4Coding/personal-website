@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif;
     font-size: 62.5%; /* 62.5% of 16px = 10px */
-    background-color: var(--black-pearl);
+    background-color: var(--dark-pearl);
 
     @media (max-width: 768px) {
       font-size: 50%;
@@ -24,17 +24,17 @@ const GlobalStyle = createGlobalStyle`
     /* Scrollbar Styles */
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--prussian-blue) var(--light-black-pearl);
+    scrollbar-color: var(--dark-blue) var(--light-pearl);
   }
   body::-webkit-scrollbar {
     width: 12px;
   }
   body::-webkit-scrollbar-track {
-    background: var(--light-black-pearl);
+    background: var(--light-pearl);
   }
   body::-webkit-scrollbar-thumb {
-    background-color: var(--prussian-blue);
-    border: 3px solid var(--light-black-pearl);
+    background-color: var(--dark-blue);
+    border: 3px solid var(--light-pearl);
     border-radius: 10px;
   }
 
@@ -46,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
     height: 100vh;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    color: var(--aquamarine);
+    color: var(--grey);
     font-size: var(--fz-xl);
     line-height: 1.3;
 
@@ -126,7 +126,7 @@ const GlobalStyle = createGlobalStyle`
 
     &:hover,
     &:focus {
-      color: var(--light-sky-blue);
+      color: var(--light-blue);
     }
   }
 

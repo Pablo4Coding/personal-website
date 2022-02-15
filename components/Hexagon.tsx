@@ -16,7 +16,7 @@ const StyledHexagon = styled.div`
   height: 80%;
   margin: auto;
   color: var(--grey);
-  background: linear-gradient(-180deg, var(--grey), var(--black-pearl));
+  background: linear-gradient(-180deg, var(--grey), var(--dark-pearl));
   ${({ theme }) => theme.mixins.flexCenter};
   transition: var(--transition);
 

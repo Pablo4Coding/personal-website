@@ -40,8 +40,8 @@ const StyledHeader = styled.header<NavbarProps>`
       css`
         height: var(--navbar-scroll-height);
         transform: translateY(0px);
-        background-color: var(--black-pearl);
-        box-shadow: 0 10px 30px -10px var(--light-black-pearl);
+        background-color: var(--dark-pearl);
+        box-shadow: 0 10px 30px -10px var(--light-pearl);
       `};
 
     ${(props) =>
@@ -50,7 +50,7 @@ const StyledHeader = styled.header<NavbarProps>`
       css`
         height: var(--navbar-scroll-height);
         transform: translateY(calc(var(--navbar-scroll-height) * -1));
-        box-shadow: 0 10px 30px -10px var(--light-black-pearl);
+        box-shadow: 0 10px 30px -10px var(--light-pearl);
       `};
   }
 `;
@@ -59,7 +59,7 @@ const StyledNav = styled.nav`
   ${({ theme }) => theme.mixins.flexBetween};
   position: relative;
   width: 100%;
-  color: var(--deep-sky-blue);
+  color: var(--blue);
 `;
 
 const StyledLogo = styled.div`

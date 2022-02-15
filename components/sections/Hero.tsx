@@ -8,7 +8,7 @@ const StyledHeroSection = styled.section`
   align-items: flex-start;
   min-height: 100vh;
   padding: 0;
-  color: var(--light-sky-blue);
+  color: var(--light-blue);
   z-index: 1;
 `;
 

@@ -2,21 +2,12 @@ import { css } from 'styled-components';
 
 const variables = css`
   :root {
-    --aquamarine: '#80FFDB';
-    --dark-aquamarine: '#72EFDD';
-    --turquoise: '#64DFDF';
-
-    --black-pearl: #021321;
-    --light-black-pearl: #001c31;
-    --tangaroa: #01243c;
-    --prussian-blue: #013d69;
-    --cobalt: #015c9c;
-    --deep-sky-blue: #00b2ee;
-    --light-sky-blue: #7edfff;
+    --dark-pearl: #021321;
+    --light-pearl: #001c31;
+    --dark-blue: #013d69;
+    --blue: #00b2ee;
+    --light-blue: #7edfff;
     --grey: #e6f1ff;
-    --aqua: #00ffff;
-    --orange: #ff8c00;
-    --pink: #f57dff;
 
     --fz-xxs: 1.2rem;
     --fz-xs: 1.3rem;

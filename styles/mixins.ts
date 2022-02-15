@@ -14,21 +14,15 @@ const mixins = {
   `,
 
   gradientText: css`
-    background-color: var(--deep-sky-blue);
+    background-color: var(--blue);
     /* background-image: linear-gradient(
       to right,
-      var(--deep-sky-blue) 20%,
+      var(--blue) 20%,
       #fff 40%,
       #fff 60%,
-      var(--deep-sky-blue) 80%
+      var(--blue) 80%
     ); */
-    background-image: linear-gradient(
-      -45deg,
-      var(--cobalt),
-      var(--deep-sky-blue),
-      var(--grey),
-      var(--aqua)
-    );
+    background-image: linear-gradient(-45deg, var(--dark-blue), var(--blue), var(--grey));
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;

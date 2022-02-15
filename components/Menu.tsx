@@ -100,8 +100,8 @@ const StyledSidebar = styled.aside<MenuProps>`
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0;
-    background-color: var(--black-pearl);
-    box-shadow: -10px 0px 30px -15px var(--black-pearl);
+    background-color: var(--dark-pearl);
+    box-shadow: -10px 0px 30px -15px var(--dark-pearl);
     z-index: 2;
     transform: translateX(${(props) => (props.menuOpen ? 0 : 100)}vw);
     visibility: ${(props) => (props.menuOpen ? 'visible' : 'hidden')};
@@ -112,7 +112,7 @@ const StyledSidebar = styled.aside<MenuProps>`
     ${({ theme }) => theme.mixins.flexBetween};
     width: 100%;
     flex-direction: column;
-    color: var(--deep-sky-blue);
+    color: var(--blue);
     /* font-family: var(--font-mono); */
     text-align: center;
   }
